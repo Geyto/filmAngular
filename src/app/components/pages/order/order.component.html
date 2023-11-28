@@ -1,0 +1,141 @@
+<section class="form animate__animated animate__fadeInLeftBig wow">
+  <div class="container">
+    <div class="title mt-5" *ngIf="success === 1">Спасибо за заказ!</div>
+    <div class="title mt-5" *ngIf="message !== '' && success === 0">Произошла ошибка. Попробуйте еще раз.</div>
+<!--    <div class="popup" id="popup" *ngIf="message === '' && success === 0 ">Error:{{message}}</div>-->
+    <div class="row mt-5" id="order" *ngIf="success === 0 && message === ''">
+      <h2 class="mx-auto fw-bold text-center mb-5 px-0" style="font-size: 37px">Сделать заказ</h2>
+      <form action="" class="mx-auto form__inputs" style="width: 636px" [formGroup]="submitFormGroup">
+        <div class="row d-flex flex-wrap justify-content-sm-between">
+          <div class="row d-flex justify-content-sm-between ">
+            <div class="col-sm-12 col-md-4">
+              <div>Имя</div>
+              <input class="w-100" type="text" id="name" formControlName="name"
+                     [class]="{'border-danger': name?.invalid && (name?.touched || name?.dirty)}">
+              <div *ngIf="name?.invalid && (name?.touched || name?.dirty)"
+                   [class]="{'text-danger': name?.invalid && (name?.touched || name?.dirty)}">
+                <div class="invalid-feedbacks"
+                     *ngIf="name?.errors?.['required']">
+                  Name field is required
+                </div>
+                <div class="invalid-feedbacks"
+                     *ngIf="name?.errors?.['pattern']">
+                  Name field is not correct
+                </div>
+              </div>
+
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div>Фамилия</div>
+              <input class="w-100" type="text" id="secondName" formControlName="last_name">
+              <div *ngIf="last_name?.invalid && (last_name?.touched || last_name?.dirty)"
+                   [class]="{'text-danger': last_name?.invalid && (last_name?.touched || last_name?.dirty)}">
+                <div class="invalid-feedbacks"
+                     *ngIf="last_name?.errors?.['required']">
+                  Surname field is required
+                </div>
+                <div class="invalid-feedbacks"
+                     *ngIf="last_name?.errors?.['pattern']">
+                  Surname field is not correct
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div>Телефон</div>
+              <input class="w-100" type="tel" id="phone" formControlName="phone">
+              <div *ngIf="phone?.invalid && (phone?.touched || phone?.dirty)"
+                   [class]="{'text-danger': phone?.invalid && (phone?.touched || phone?.dirty)}">
+                <div class="invalid-feedbacks"
+                     *ngIf="phone?.errors?.['required']">
+                  Phone field is required
+                </div>
+                <div class="invalid-feedbacks"
+                     *ngIf="phone?.errors?.['pattern']">
+                  Phone field is not correct
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 d-flex justify-content-sm-between">
+              <label class="w-100 me-3">
+                <div>Страна</div>
+                <input class="w-100" type="text" id="country" formControlName="country">
+                <div *ngIf="country?.invalid && (country?.touched || country?.dirty)"
+                     [class]="{'text-danger': country?.invalid && (country?.touched || country?.dirty)}">
+                  <div class="invalid-feedbacks"
+                       *ngIf="country?.errors?.['required']">
+                    Country field is required
+                  </div>
+                  <div class="invalid-feedbacks"
+                       *ngIf="country?.errors?.['pattern']">
+                    Country field is not correct
+                  </div>
+                </div>
+              </label>
+              <label class="w-100 ms-3">
+                <div>Индекс</div>
+                <input class="w-100" type="text" id="indexMail" formControlName="zip">
+                <div *ngIf="zip?.invalid && (zip?.touched || zip?.dirty)"
+                     [class]="{'text-danger': zip?.invalid && (zip?.touched || zip?.dirty)}">
+                  <div class="invalid-feedbacks"
+                       *ngIf="zip?.errors?.['required']">
+                    Zip field is required
+                  </div>
+                  <div class="invalid-feedbacks"
+                       *ngIf="zip?.errors?.['pattern']">
+                    Zip field is not correct
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col d-flex justify-content-center">
+              <label class="w-100">
+                <div>Адрес</div>
+                <input class="w-100" type="text" id="address" formControlName="address">
+              </label>
+              <div *ngIf="address?.invalid && (address?.touched || address?.dirty)"
+                   [class]="{'text-danger': address?.invalid && (address?.touched || address?.dirty)}">
+                <div class="invalid-feedbacks"
+                     *ngIf="address?.errors?.['required']">
+                  Address field is required
+                </div>
+                <div class="invalid-feedbacks"
+                     *ngIf="address?.errors?.['pattern']">
+                  Address field is not correct
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col d-flex justify-content-center">
+              <label class="w-100">
+                <div>Товар</div>
+                <input class="w-100" readonly  type="text" id="product" formControlName="product" [(ngModel)]="this.param">
+              </label>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col d-flex justify-content-center">
+              <label class="w-100">
+                <div>Комментарий к заказу</div>
+                <textarea class="w-100" id="comment" formControlName="comment"></textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <label>
+                <button type="submit" id="send" class="btn hvr-grow btn-lg btn-primary  px-5 px-4" (click)="createOrder()">
+                  Отправить
+                </button>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

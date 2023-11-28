@@ -1,0 +1,13 @@
+<div class="container mt-5">
+<div class="col">
+  <div class="card shadow-sm h-100 px-1">
+      <img src="{{product.image}}" class="w-25 " alt="">
+    <div class="card-body">
+      <h4 class="card__title fw-bold" style="font-size: 20px">{{product.title}}</h4>
+      <h5>Цена товара: {{product.price | currency:'RUB':'symbol'}}</h5>
+      <p class="card-text">{{product.description}}</p>
+      <a class="btn hvr-grow btn-lg btn-primary mt-2  px-4" routerLink="/order" [queryParams]="{product:product.title}">Купить</a>
+    </div>
+  </div>
+</div>
+</div>

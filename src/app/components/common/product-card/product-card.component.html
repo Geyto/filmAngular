@@ -1,0 +1,14 @@
+<div class="col">
+  <div class="card shadow-sm h-100 px-1">
+    <a href="{{product.image}}" class="image-link">
+      <img src="{{product.image}}" class="w-100" alt="">
+    </a>
+
+    <div class="card-body">
+      <h4 class="card__title fw-bold" style="font-size: 20px">{{product.title}}</h4>
+      <p class="card-text">{{product.description}}</p>
+      <a [routerLink]="['/product',product.id]" class="btn hvr-grow btn-lg btn-primary mt-2  px-4">Подробнее</a>
+    </div>
+  </div>
+</div>
+

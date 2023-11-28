@@ -1,0 +1,25 @@
+.container {
+  display: block;
+  min-height: calc(100vh - 208px);
+}
+
+.title {
+  font-size: 54px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  max-height: 200px;
+}
+.popup{
+  position: absolute;
+  top: 200px;
+  left: 50px;
+  width: 350px;
+  height: 50px;
+  border-radius: 20px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
