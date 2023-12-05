@@ -5,7 +5,7 @@ import {Observable} from "rxjs";
   providedIn: 'root'
 })
 export class PopupService {
-  public observable: Observable<any>
+  public observable: Observable<HTMLElement | null>
   private popup: HTMLElement | null
   private close: HTMLElement | null
 
@@ -27,7 +27,7 @@ export class PopupService {
             }
           observer.next(this.popup);
         }
-      }, 10000)
+      }, 1000000)
     })
   }
 

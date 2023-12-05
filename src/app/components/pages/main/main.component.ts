@@ -21,7 +21,7 @@ export class MainComponent implements OnInit {
 
     this.popupService.observable.subscribe((element) => {
       if (element)
-        element.style = 'display: block ; background: rgba(0, 0, 0, 0.5)'
+        element.setAttribute('style','display: block ; background: rgba(0, 0, 0, 0.5)')
     })
   }
 }

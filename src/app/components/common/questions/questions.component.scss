@@ -1,0 +1,25 @@
+.accordion__element{
+  max-width: 856px;
+  margin: 0 auto;
+  border: none;
+
+}
+.accordion__item{
+  border: 0;
+  padding-bottom: 20px;
+}
+.item{
+  max-width: 856px;
+  height: 68px;
+  background: linear-gradient(360deg, #076BFF 0%, #007BFF 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 18px;
+
+}
+.body{
+ padding: 20px 16px 0 16px;
+}

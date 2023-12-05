@@ -2,55 +2,110 @@
   <div class="container">
     <div class="row">
       <h2 class="accordion__title fw-bold text-center mb-5">Ответы на часто задаваемые вопросы</h2>
-      <div class="col-lg-8 mx-auto" id="accordion">
-        <div class="accordion__blue mb-3"><h3 class="accordion__blue-title">Собираете ли вы подарочные
-          боксы?</h3>
-          <img class="accordion__blue-img" src="assets/img/accordDown.png" alt="arrow">
+      <div ngbAccordion class="accordion__element" style="max-width: 840px">
+
+        <div ngbAccordionItem class="accordion__item" [collapsed]="false">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton class="item">Собираете ли вы подарочные боксы?</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody class="body">
+              <ng-template >Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус,
+                объем и
+                стоимость!
+              </ng-template>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="accord__text ">
-            Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
-          </p>
+        <div ngbAccordionItem class="accordion__item">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton class="item">Сколько у вас разновидностей чая?</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody class="body">
+              <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis
+                obcaecati odit recusandae?
+              </ng-template>
+            </div>
+          </div>
         </div>
-        <div class="accordion__blue mb-3"><h3 class="accordion__blue-title">Сколько у вас разновидностей
-          чая?</h3>
-          <img class="accordion__blue-img" src="assets/img/accordDown.png" alt="arrow">
+        <div ngbAccordionItem class="accordion__item">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton class="item">В какой срок осуществляется доставка?</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody class="body">
+              <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis
+                obcaecati odit recusandae?
+              </ng-template>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="accord__text ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis obcaecati
-            odit recusandae?
-          </p>
+        <div ngbAccordionItem class="accordion__item">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton class="item">У вас обновляется ассортимент?</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody class="body">
+              <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis
+                obcaecati odit recusandae?
+              </ng-template>
+            </div>
+          </div>
         </div>
-        <div class="accordion__blue mb-3"><h3 class="accordion__blue-title">В какой срок осуществляется
-          доставка?</h3>
-          <img class="accordion__blue-img" src="assets/img/accordDown.png" alt="arrow">
+        <div ngbAccordionItem class="accordion__item">
+          <h2 ngbAccordionHeader>
+            <button ngbAccordionButton class="item">Какого объема у вас пачки чая?</button>
+          </h2>
+          <div ngbAccordionCollapse>
+            <div ngbAccordionBody>
+              <ng-template class="body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis
+                obcaecati odit recusandae?
+              </ng-template>
+            </div>
+          </div>
         </div>
-        <div>
-          <p class="accord__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis obcaecati
-            odit recusandae?
-          </p>
-        </div>
-        <div class="accordion__blue mb-3"><h3 class="accordion__blue-title">У вас обновляется ассортимент?</h3>
-          <img class="accordion__blue-img" src="assets/img/accordDown.png" alt="arrow">
-        </div>
-        <div>
-          <p class="accord__text ">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis obcaecati
-            odit recusandae?
-          </p>
-        </div>
-        <div class="accordion__blue "><h3 class="accordion__blue-title">Какого объема у вас пачки чая?</h3>
-          <img class="accordion__blue-img" src="assets/img/accordDown.png" alt="arrow">
-        </div>
-        <div>
-          <p class="accord__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis obcaecati
-            odit recusandae?
-          </p>
-        </div>
+
+
       </div>
     </div>
   </div>
 </section>
+
+
+<!--<div ngbAccordionItem>-->
+<!--  <h2 ngbAccordionHeader>-->
+<!--    <button ngbAccordionButton>В какой срок осуществляется доставка?</button>-->
+<!--  </h2>-->
+<!--  <div ngbAccordionCollapse>-->
+<!--    <div ngbAccordionBody>-->
+<!--      <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis-->
+<!--        obcaecati odit recusandae?-->
+<!--      </ng-template>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div ngbAccordionItem>-->
+<!--  <h2 ngbAccordionHeader>-->
+<!--    <button ngbAccordionButton>У вас обновляется ассортимент?</button>-->
+<!--  </h2>-->
+<!--  <div ngbAccordionCollapse>-->
+<!--    <div ngbAccordionBody>-->
+<!--      <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis-->
+<!--        obcaecati odit recusandae?-->
+<!--      </ng-template>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--<div ngbAccordionItem>-->
+<!--  <h2 ngbAccordionHeader>-->
+<!--    <button ngbAccordionButton>Какого объема у вас пачки чая?</button>-->
+<!--  </h2>-->
+<!--  <div ngbAccordionCollapse>-->
+<!--    <div ngbAccordionBody>-->
+<!--      <ng-template>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores eveniet iste nobis-->
+<!--        obcaecati odit recusandae?-->
+<!--      </ng-template>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

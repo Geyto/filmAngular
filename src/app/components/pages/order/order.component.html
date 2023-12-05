@@ -2,10 +2,9 @@
   <div class="container">
     <div class="title mt-5" *ngIf="success === 1">Спасибо за заказ!</div>
     <div class="title mt-5" *ngIf="message !== '' && success === 0">Произошла ошибка. Попробуйте еще раз.</div>
-<!--    <div class="popup" id="popup" *ngIf="message === '' && success === 0 ">Error:{{message}}</div>-->
     <div class="row mt-5" id="order" *ngIf="success === 0 && message === ''">
       <h2 class="mx-auto fw-bold text-center mb-5 px-0" style="font-size: 37px">Сделать заказ</h2>
-      <form action="" class="mx-auto form__inputs" style="width: 636px" [formGroup]="submitFormGroup">
+      <form action="" class="mx-auto form__inputs" style="width: 636px" [formGroup]="submitFormGroup" (ngSubmit)="createOrder()">
         <div class="row d-flex flex-wrap justify-content-sm-between">
           <div class="row d-flex justify-content-sm-between ">
             <div class="col-sm-12 col-md-4">
@@ -75,7 +74,7 @@
               </label>
               <label class="w-100 ms-3">
                 <div>Индекс</div>
-                <input class="w-100" type="text" id="indexMail" formControlName="zip">
+                <input class="w-100" type="number" id="indexMail" formControlName="zip">
                 <div *ngIf="zip?.invalid && (zip?.touched || zip?.dirty)"
                      [class]="{'text-danger': zip?.invalid && (zip?.touched || zip?.dirty)}">
                   <div class="invalid-feedbacks"
@@ -113,7 +112,7 @@
             <div class="col d-flex justify-content-center">
               <label class="w-100">
                 <div>Товар</div>
-                <input class="w-100" readonly  type="text" id="product" formControlName="product" [(ngModel)]="this.param">
+                <input class="w-100" readonly  type="text" id="product" formControlName="product">
               </label>
             </div>
           </div>
@@ -128,7 +127,7 @@
           <div class="row mt-3">
             <div class="col">
               <label>
-                <button type="submit" id="send" class="btn hvr-grow btn-lg btn-primary  px-5 px-4" (click)="createOrder()">
+                <button id="send" class="btn hvr-grow btn-lg btn-primary  px-5 px-4" [disabled]="submitFormGroup.invalid || submitFormGroup.disabled">
                   Отправить
                 </button>
               </label>

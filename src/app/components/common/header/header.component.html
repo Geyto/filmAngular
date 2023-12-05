@@ -8,6 +8,8 @@
         </a>
       </div>
 
+
+
       <div class="header__main d-flex justify-content-between w-100">
         <div class="header__item d-flex d-flex">
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -26,8 +28,7 @@
         </div>
       </div>
 
-      <div class="header__collapse w-100">
-
+      <div class="header__collapse w-100" style="display: none">
         <p class="d-flex btn-col">
           <a data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false"
              aria-controls="collapseExample">
@@ -39,10 +40,8 @@
             <div class="collapse collapse__menu multi-collapse " id="multiCollapseExample2">
               <div class="card card-body">
                 <ul class=" collapse__list col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="#" class="nav-link mb-1 px-2 text-dark ">Главная</a></li>
-                  <li><a href="#" class="nav-link mb-1 px-2 text-muted">Преимущества</a></li>
-                  <li><a href="#" class="nav-link mb-1 px-2 text-muted">Цены</a></li>
-                  <li><a href="#" class="nav-link mb-1 px-2 text-muted">Контакты</a></li>
+                  <li><a routerLink="" class="nav-link px-2 text-dark ">Главная</a></li>
+                  <li><a routerLink="products" class="nav-link px-2 text-muted">Каталог</a></li>
                 </ul>
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                   <input type="search" class="form-control form-control-dark" placeholder="Поиск чая"

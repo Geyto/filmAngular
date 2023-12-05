@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
-import {HttpClient} from "@angular/common/http";
 import {OrderService} from "../../../service/order.service";
 
 
@@ -19,14 +18,14 @@ export class OrderComponent implements OnInit{
     zip: new FormControl('', [Validators.required,]),
     product: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-zа-яёА-ЯЁ0-9\\-\\s\\/]+$')]),
-    comment: new FormControl('', [Validators.required,]),
+    comment: new FormControl('' ),
   })
 
   param:string
   success: number
   message: string
   submitButton: HTMLElement | null
-  constructor(private activatedRoute: ActivatedRoute, private http:HttpClient, private orderService: OrderService) {
+  constructor(private activatedRoute: ActivatedRoute, private orderService: OrderService) {
     this.param = ''
     this.success = 0
     this.message = ''
