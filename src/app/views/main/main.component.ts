@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PopupService} from "../../../service/popup.service";
-import {ProductService} from "../../../service/product.service";
+import {PopupService} from "../../shared/service/popup.service";
+import {ProductService} from "../../shared/service/product.service";
 import {ProductType} from "../../../types/product";
 import {Router} from "@angular/router";
 
